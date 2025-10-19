@@ -57,7 +57,7 @@ namespace Figuras
             //Se agrega color violeta  esoecifico
            Pen pen = new Pen(Color.MediumVioletRed);
     
-            Point[] points = new Point[4]
+            Point[] points = new Point[5]
             {
                 new Point(x,y),
                 new Point(x + ancho,y),
