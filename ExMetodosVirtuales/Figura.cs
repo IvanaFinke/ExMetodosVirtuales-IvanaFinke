@@ -52,6 +52,7 @@ namespace Figuras
         {
         }
         
+        //Parte b)
          public override void Dibujar(Graphics graphics, int x, int y)
         {
             //Se agrega color violeta  esoecifico
