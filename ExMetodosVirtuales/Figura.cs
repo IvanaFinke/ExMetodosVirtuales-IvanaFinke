@@ -29,9 +29,9 @@ namespace Figuras
 
         public override void Dibujar(Graphics graphics, int x, int y)
         {
-            //Se agrega color verde esoecifico
+            //Se agrega color verde si es null
 
-            Pen pen = new Pen(Color.Green);
+            Pen pen = this.Pen ?? new Pen(Color.Green);
 
             Point[] points = new Point[4]
             { 
@@ -55,8 +55,9 @@ namespace Figuras
         //Parte b)
          public override void Dibujar(Graphics graphics, int x, int y)
         {
-            //Se agrega color violeta  esoecifico
-           Pen pen = new Pen(Color.MediumVioletRed);
+            //Se agrega color violeta si es null
+            
+            Pen pen = this.Pen ?? new Pen(Color.MediumVioletRed);
     
             Point[] points = new Point[5]
             {
@@ -86,7 +87,8 @@ namespace Figuras
 
         public override void Dibujar(Graphics graphics, int x, int y)
         {
-            Pen pen = new Pen(Color.Red);
+            Pen pen = this.Pen ?? new Pen(Color.Red);
+           
             graphics.DrawEllipse(pen,x,y, radio, radio);
         }
     }
