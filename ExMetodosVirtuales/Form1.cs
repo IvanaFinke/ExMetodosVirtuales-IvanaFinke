@@ -55,11 +55,16 @@ namespace Figuras
             Graphics gr = pictureBox1.CreateGraphics();
             //Pen pen = new Pen(Color.Black);
             //a) Las figuras deben mostrarse en trazo rojo
-           // Pen penRojo = new Pen(Color.Red);
+            // Pen penRojo = new Pen(Color.Red);
+            int tamX = 40;
+            int tamY = 20;
+
             for (int i = 0; i < figuras.Length; i++)
             {
+                tamX * i;
+                tamY * i;
                 //figuras[i].Dibujar(penRojo,gr,i * 100, 50);
-                figuras[i].Dibujar(gr,i * 100, 50);
+                figuras[i].Dibujar(gr,tamX, tamY);
             }
 
         }
