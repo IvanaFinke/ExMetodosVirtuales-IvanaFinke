@@ -48,6 +48,8 @@ namespace Figuras
     public class Cuadrado : Rectangulo
     {
         // Constructor. Un cuadrado es un rectangulo con ancho = alto
+        Pen pen = new Pen(Color.MediumVioletRed);
+        
         public Cuadrado(int lado) : base(lado, lado)
         {
         }
