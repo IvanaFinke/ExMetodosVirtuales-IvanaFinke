@@ -26,9 +26,11 @@ namespace Figuras
         {
             Graphics gr = pictureBox1.CreateGraphics();
             Pen pen = new Pen(Color.Black);
+            //a) Las figuras deben mostrarse en trazo rojo
+            Pen penRojo = new Pen(Color.Red);
             for (int i = 0; i < figuras.Length; i++)
             {
-                figuras[i].Dibujar(pen,gr,i * 100, 50);
+                figuras[i].Dibujar(penRojo,gr,i * 100, 50);
             }
 
         }
