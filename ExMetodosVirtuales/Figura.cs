@@ -48,10 +48,25 @@ namespace Figuras
     public class Cuadrado : Rectangulo
     {
         // Constructor. Un cuadrado es un rectangulo con ancho = alto
-        Pen pen = new Pen(Color.MediumVioletRed);
-        
         public Cuadrado(int lado) : base(lado, lado)
         {
+        }
+        
+         public override void Dibujar(Graphics graphics, int x, int y)
+        {
+            //Se agrega color violeta  esoecifico
+           Pen pen = new Pen(Color.MediumVioletRed);
+    
+            Point[] points = new Point[4]
+            {
+                new Point(x,y),
+                new Point(x + ancho,y),
+                new Point(x + ancho,y + alto),
+                new Point(x,y + alto),
+                new Point(x,y)
+            };
+            // DrawPolygon dibuja un poligono dado un conjunto de puntos y un lapiz
+            graphics.DrawRectangle(pen, points);
         }
 
         
