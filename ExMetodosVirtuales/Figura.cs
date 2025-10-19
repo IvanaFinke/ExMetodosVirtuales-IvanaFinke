@@ -66,7 +66,7 @@ namespace Figuras
                 new Point(x,y)
             };
             // DrawPolygon dibuja un poligono dado un conjunto de puntos y un lapiz
-            graphics.DrawRectangle(pen, points);
+            graphics.DrawPolygon(pen, points);
         }
 
         
