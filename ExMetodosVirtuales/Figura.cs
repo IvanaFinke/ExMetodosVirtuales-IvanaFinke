@@ -82,15 +82,78 @@ namespace Figuras
         // Constructor
         public Circulo(int radio)
         {
-            this.radio= radio;
+            this.radio = radio;
         }
 
         public override void Dibujar(Graphics graphics, int x, int y)
         {
             Pen pen = this.Pen ?? new Pen(Color.Red);
 
-           
-            graphics.DrawEllipse(pen,x,y, radio, radio);
+
+            graphics.DrawEllipse(pen, x, y, radio, radio);
         }
+    }
+
+    //Parte E:
+    public class TrianguloIsosceles : Rectangulo
+    {
+        protected int lado;
+        protected int ladoBase;
+
+        public TrianguloIsosceles(int lado, int ladoBase)
+        {
+            this.lado = lado;
+            this.ladoBase = ladoBase;
+        }
+
+        public override void Dibujar(Graphics graphics, int x, int y)
+        {
+            //Se agrega color violeta si es null
+
+            Pen pen = this.Pen ?? new Pen(Color.SteelBlue);
+
+            int alto = Math.Pow(lado, 2) - (Math.Pow((ladoBase) / 2), 2)
+            Point[] points = new Point[3]
+            {
+                new Point(x,y + alto),
+                new Point(x + ancho/2,y),
+                new Point(x + ancho,y + alto)
+              
+            };
+            // DrawPolygon dibuja un poligono dado un conjunto de puntos y un lapiz
+            graphics.DrawPolygon(pen, points);
+        }
+
+
+    }
+    
+    public class TrianguloEquilatero : Rectangulo
+    {
+        protected int lado;
+
+        public TrianguloEquilatero(int lado)
+        {
+            this.lado = lado;
+        }
+        
+         public override void Dibujar(Graphics graphics, int x, int y)
+        {
+            //Se agrega color violeta si es null
+
+            Pen pen = this.Pen ?? new Pen(Color.MintCream);
+
+            int alto = (float)(Math.Sqrt(3) / 2 * lado);
+
+            Point[] points = new Point[3]
+            {
+                new Point(x,y + alto),
+                new Point(x + lado/2,y),
+                new Point(x + lado,y + alto)
+            };
+            // DrawPolygon dibuja un poligono dado un conjunto de puntos y un lapiz
+            graphics.DrawPolygon(pen, points);
+        }
+
+        
     }
 }
