@@ -112,7 +112,8 @@ namespace Figuras
 
             Pen pen = this.Pen ?? new Pen(Color.SteelBlue);
 
-            int alto = Math.Pow(lado, 2) - (Math.Pow((ladoBase) / 2), 2)
+            int alto = Math.Pow(lado, 2) - (Math.Pow((ladoBase) / 2), 2);
+            
             Point[] points = new Point[3]
             {
                 new Point(x,y + alto),
