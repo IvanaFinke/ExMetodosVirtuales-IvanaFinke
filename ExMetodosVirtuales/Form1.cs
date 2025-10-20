@@ -48,7 +48,7 @@ namespace Figuras
             Pen pen5 = new Pen(color4, 2);
 
             
-            figuras = new Figura[3]
+            figuras = new Figura[5]
             {
                 new Circulo(40) {Pen = pen1},
                 new Rectangulo(60,90) {Pen = pen2},
