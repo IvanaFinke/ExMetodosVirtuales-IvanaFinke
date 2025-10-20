@@ -52,8 +52,8 @@ namespace Figuras
             {
                 new Circulo(60) {Pen = pen1},
                 new Rectangulo(50,80) {Pen = pen2},
-                new Cuadrado(100) {Pen = pen3 }
-                new TrianguloEquilatero(10) {Pen = pen5}
+                new Cuadrado(100) {Pen = pen3 },
+                new TrianguloEquilatero(10) {Pen = pen5},
                 new TrianguloIsosceles(13,10) {Pen = pen4}
                 
             };
