@@ -50,7 +50,7 @@ namespace Figuras
             
             figuras = new Figura[5]
             {
-                new Circulo(40) {Pen = pen1},
+                new Circulo(20) {Pen = pen1},
                 new Rectangulo(60,90) {Pen = pen2},
                 new Cuadrado(100) {Pen = pen3 },
                 new TrianguloEquilatero(80) {Pen = pen5},
