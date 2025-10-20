@@ -50,11 +50,11 @@ namespace Figuras
             
             figuras = new Figura[3]
             {
-                new Circulo(60) {Pen = pen1},
-                new Rectangulo(50,80) {Pen = pen2},
+                new Circulo(40) {Pen = pen1},
+                new Rectangulo(60,90) {Pen = pen2},
                 new Cuadrado(100) {Pen = pen3 },
-                new TrianguloEquilatero(10) {Pen = pen5},
-                new TrianguloIsosceles(13,10) {Pen = pen4}
+                new TrianguloEquilatero(80) {Pen = pen5},
+                new TrianguloIsosceles(90,100) {Pen = pen4}
                 
             };
 

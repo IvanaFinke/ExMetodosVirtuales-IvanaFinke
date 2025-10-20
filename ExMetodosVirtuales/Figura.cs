@@ -95,7 +95,7 @@ namespace Figuras
     }
 
     //Parte E:
-    public class TrianguloIsosceles : Rectangulo
+    public class TrianguloIsosceles : Figura
     {
         protected int lado;
         protected int ladoBase;
@@ -112,13 +112,13 @@ namespace Figuras
 
             Pen pen = this.Pen ?? new Pen(Color.SteelBlue);
 
-            int alto = Math.Pow(lado, 2) - (Math.Pow((ladoBase) / 2), 2);
-            
+            double altura = Math.Sqrt(Math.Pow(lado, 2) - Math.Pow(baseTriangulo / 2.0, 2));
+
             Point[] points = new Point[3]
             {
-                new Point(x,y + alto),
-                new Point(x + ancho/2,y),
-                new Point(x + ancho,y + alto)
+                new Point(x, (int)(y + alto)),
+                new Point(x + ladoBase/2,y),
+                new Point(x + ladoBase,(int)(y + alto))
               
             };
             // DrawPolygon dibuja un poligono dado un conjunto de puntos y un lapiz
@@ -128,7 +128,7 @@ namespace Figuras
 
     }
     
-    public class TrianguloEquilatero : Rectangulo
+    public class TrianguloEquilatero : Figura
     {
         protected int lado;
 
@@ -143,13 +143,13 @@ namespace Figuras
 
             Pen pen = this.Pen ?? new Pen(Color.MintCream);
 
-            int alto = (float)(Math.Sqrt(3) / 2 * lado);
+            double altura = (Math.Sqrt(3) / 2) * lado;
 
             Point[] points = new Point[3]
             {
-                new Point(x,y + alto),
+                new Point(x,(int)(y + alto)),
                 new Point(x + lado/2,y),
-                new Point(x + lado,y + alto)
+                new Point(x + lado,(int)(y + alto))
             };
             // DrawPolygon dibuja un poligono dado un conjunto de puntos y un lapiz
             graphics.DrawPolygon(pen, points);
