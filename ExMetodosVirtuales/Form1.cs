@@ -44,8 +44,8 @@ namespace Figuras
             figuras = new Figura[3]
             {
                 new Circulo(60) {Pen = pen1},
-                new Rectangulo(30,50) {Pen = pen2},
-                new Cuadrado(45) {Pen = pen3}
+                new Rectangulo(50,80) {Pen = pen2},
+                new Cuadrado(100) {Pen = pen3}
             };
 
         }
@@ -55,16 +55,11 @@ namespace Figuras
             Graphics gr = pictureBox1.CreateGraphics();
             //Pen pen = new Pen(Color.Black);
             //a) Las figuras deben mostrarse en trazo rojo
-            // Pen penRojo = new Pen(Color.Red);
-            int tamX = 40;
-            int tamY = 20;
-
+           // Pen penRojo = new Pen(Color.Red);
             for (int i = 0; i < figuras.Length; i++)
             {
-                tamX * i;
-                tamY * i;
                 //figuras[i].Dibujar(penRojo,gr,i * 100, 50);
-                figuras[i].Dibujar(gr,tamX, tamY);
+                figuras[i].Dibujar(gr,i * 100, 50);
             }
 
         }

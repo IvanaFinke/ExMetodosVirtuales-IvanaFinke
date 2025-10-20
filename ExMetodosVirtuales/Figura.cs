@@ -88,6 +88,7 @@ namespace Figuras
         public override void Dibujar(Graphics graphics, int x, int y)
         {
             Pen pen = this.Pen ?? new Pen(Color.Red);
+
            
             graphics.DrawEllipse(pen,x,y, radio, radio);
         }
