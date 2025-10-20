@@ -112,7 +112,7 @@ namespace Figuras
 
             Pen pen = this.Pen ?? new Pen(Color.SteelBlue);
 
-            double altura = Math.Sqrt(Math.Pow(lado, 2) - Math.Pow(baseTriangulo / 2.0, 2));
+            double alto = Math.Sqrt(Math.Pow(lado, 2) - Math.Pow(ladoBase / 2.0, 2));
 
             Point[] points = new Point[3]
             {
@@ -143,7 +143,7 @@ namespace Figuras
 
             Pen pen = this.Pen ?? new Pen(Color.MintCream);
 
-            double altura = (Math.Sqrt(3) / 2) * lado;
+            double alto = (Math.Sqrt(3) / 2) * lado;
 
             Point[] points = new Point[3]
             {
